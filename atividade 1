@@ -1,1 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
+#include<ctype.h>
+
+int main() {
+    char opcao;
+    
+    printf("gosta de qual tipo de genero de filme ou serie?\n: ");
+     printf("responda com S ou N\n");
+      
+       scanf(" %c,&opcao");
+       
+    opcao = toupper(opcao);
+        printf("Drama\n");
+    if (opcao=='S'){ printf(Aventura)
+    
