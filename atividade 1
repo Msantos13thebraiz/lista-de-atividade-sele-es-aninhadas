@@ -1,15 +1,86 @@
 #include <stdio.h>
-#include<ctype.h>
 
 int main() {
-    char opcao;
-    
-    printf("gosta de qual tipo de genero de filme ou serie?\n: ");
-     printf("responda com S ou N\n");
-      
-       scanf(" %c,&opcao");
-       
-    opcao = toupper(opcao);
-        printf("Drama\n");
-    if (opcao=='S'){ printf(Aventura)
-    
+    char drama, aventura, suspense, fantasia;
+    char comedia, romance, musical, nerd;
+    char acao, policial, crime;
+
+    // PRIMEIRA PERGUNTA
+    printf("Drama [S/N]? ");
+    scanf(" %c", &drama);
+
+    if (drama == 'S' || drama == 's') {
+
+        printf("Aventura [S/N]? ");
+        scanf(" %c", &aventura);
+
+        if (aventura == 'S' || aventura == 's') {
+
+            printf("Suspense [S/N]? ");
+            scanf(" %c", &suspense);
+
+            if (suspense == 'N' || suspense == 'n') {
+
+                printf("Fantasia [S/N]? ");
+                scanf(" %c", &fantasia);
+
+                if (fantasia == 'S' || fantasia == 's') {
+                    printf("Você deve assistir Game of Thrones\n");
+                } else {
+                    printf("Desculpe! Não tenho série para indicar\n");
+                }
+
+            } else {
+                printf("Desculpe! Não tenho série para indicar\n");
+            }
+
+        } else {
+            printf("Desculpe! Não tenho série para indicar\n");
+        }
+
+    } else { // SE NÃO GOSTA DE DRAMA
+
+        printf("Comedia [S/N]? ");
+        scanf(" %c", &comedia);
+
+        if (comedia == 'S' || comedia == 's') {
+
+            printf("Romance [S/N]? ");
+            scanf(" %c", &romance);
+
+            printf("Musical [S/N]? ");
+            scanf(" %c", &musical);
+
+            printf("Nerd [S/N]? ");
+            scanf(" %c", &nerd);
+
+            if (nerd == 'S' || nerd == 's') {
+                printf("Você deve assistir The Big Bang Theory\n");
+            } else {
+                printf("Desculpe! Não tenho série para indicar\n");
+            }
+
+        } else {
+
+            printf("Acao [S/N]? ");
+            scanf(" %c", &acao);
+
+            printf("Drama [S/N]? ");
+            scanf(" %c", &drama);
+
+            printf("Policial [S/N]? ");
+            scanf(" %c", &policial);
+
+            printf("Crime [S/N]? ");
+            scanf(" %c", &crime);
+
+            if (crime == 'S' || crime == 's') {
+                printf("Você deve assistir Dexter\n");
+            } else {
+                printf("Desculpe! Não tenho série para indicar\n");
+            }
+        }
+    }
+
+    return 0;
+}
