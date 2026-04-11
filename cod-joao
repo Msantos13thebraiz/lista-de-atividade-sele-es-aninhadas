@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+    char a;
+
+    printf("Deseja Drama? (S/N)\n");
+    scanf(" %c", &a);
+
+    if (a == 'S' || a == 's') {
+        printf("Aventura? (S/N)\n");
+        scanf(" %c", &a);
+        if (a == 'S' || a == 's') {
+            printf("Suspense? (S/N)\n");
+            scanf(" %c", &a);
+            if (a == 'S' || a == 's') {
+                printf("Te indico LOST.\n");
+            } else {
+                printf("Fantasia? (S/N)\n");
+                scanf(" %c", &a);
+                if (a == 'S' || a == 's') printf("Te indico Game of Thrones\n");
+            }
+        } else {
+            // Se Drama=S mas Aventura=N, testamos outros dramas
+            printf("Mistério? (S/N)\n");
+            scanf(" %c", &a);
+            if (a == 'S' || a == 's') {
+                printf("Sci-Fi? (S/N)\n");
+                scanf(" %c", &a);
+                if (a == 'S' || a == 's') printf("Te indico X-Files\n");
+                else printf("Te indico House M.D\n");
+            }
+        }
+    } 
+    else if (a == 'N' || a == 'n') {
+        printf("Comedia? (S/N)\n");
+        scanf(" %c", &a);
+        if (a == 'S' || a == 's') {
+            printf("Besteirol? (S/N)\n");
+            scanf(" %c", &a);
+            if (a == 'S' || a == 's') printf("Te indico The Office\n");
+            else {
+                printf("Romance? (S/N)\n");
+                scanf(" %c", &a);
+                if (a == 'S' || a == 's') printf("Te indico How I Met Your Mother\n");
+            }
+        } else {
+            // Se não quer Drama nem Comédia, passamos para Ação
+            printf("Acao? (S/N)\n");
+            scanf(" %c", &a);
+            if (a == 'S' || a == 's') {
+                printf("Policial? (S/N)\n");
+                scanf(" %c", &a);
+                if (a == 'S' || a == 's') printf("Te indico The Rookie\n");
+                else printf("Te indico Dexter\n");
+            }
+        }
+    } else {
+        printf("Entrada invalida.\n");
+    }
+
+    return 0;
+}
